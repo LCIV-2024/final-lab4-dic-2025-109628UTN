@@ -66,7 +66,10 @@ public class PlayerService {
     }
     
     private Player toEntity(PlayerDTO dto) {
-        return new Player(dto.getId(), dto.getNombre(), dto.getFecha());
+        Player player = new Player();
+        player.setNombre(dto.getNombre());
+        player.setFecha(dto.getFecha());
+        return player;
     }
 }
 
